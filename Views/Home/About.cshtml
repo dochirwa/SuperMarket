@@ -1,0 +1,226 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<style>
+    /*------Profile Cards------*/
+        .team {
+            width: 350px;
+            display: inline-block;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .team .card {
+            overflow: hidden;
+            width: 350px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,.5)
+        }
+        .team .card .layer {
+            z-index: 1;
+            position: absolute;
+            top: calc(100% - 2px);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background: rgb(131,58,180);
+            background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(233,183,113,1) 100%);
+            transition: 0.5s;
+        }
+        .team .card .content {
+            z-index: 2;
+            position: relative;
+        }
+        .team .card:hover .layer {
+            top: 0;
+        }
+        .team .card .content p {
+            font-family: 'Century Gothic';
+            font-size: 14px;
+            line-height: 24px;
+            color: #000;
+        }
+        .team .card .content .image {
+            width: 100px;
+            height: 110px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }        
+        .team .card .content .details h2 {
+            font-size: 25px;
+            color: mediumpurple;
+        }
+        .team .card .content .details h2 span {
+            font-size: 18px;
+            color: purple;
+            transition: 0.5s;
+        }
+        .team .card:hover .content p {
+            font-family: 'Century Gothic';
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+        }
+        .team .card:hover .content .details h2 {
+            font-size: 25px;
+            color: white;
+        }
+        .team .card:hover .content .details h2 span {
+            font-size: 18px;
+            color: black;
+        }
+
+    /*------Images------*/
+    img {
+        width: 170%;
+        height: 100%;
+        padding-right: 50px;
+        
+    }
+
+    /*------Hero Section------*/
+    .hero-text {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    /*------Buttons------*/
+    .btn-contact {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 2px;
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 4px;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        background: #d97020;
+        text-transform: uppercase;
+    }
+    .btn-contact:hover {
+        background: #ef9f07;
+    }
+    .features {
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+</style>
+<body>
+    <!--==============================================-->
+    <!--               Hero Section                   -->
+    <!--==============================================-->
+    <div id="hero" class="container-fluid px-4 py-5 text-center" style="background: url('/Images/sammy.jpg');  background-size: cover; box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6); height: 60vh;" >
+        <div class="row flex-lg-row-reverse align-items-center py-5">
+            <div class="col-10 col-sm-8 col-lg-6 py-7"></div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size: 55px;"><b>Your Favorite Local Supermarket</b></h1>
+            <p style="font-size: 20px;">Our goal is to make sure every one who enters ours doors leaves satisfied and content with their purchase.</p>
+            <a href="#"  class="btn btn-contact" >Contact Us</a>
+        </div>
+    </div>
+    <!--------------------/ End of Hero ---------------->
+    <section class="py-5 text-center container-fluid bg-white">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto" style="font-family: 'Century Gothic';">
+                <h1 class="fw-light"><b>Who We Are</b></h1>
+                <p class="lead fw-normal text-body-secondary">We are a team of highly-skilled individuals who dedicate thier time to bring the best of the best to you. We value quality, transparency, trust, and compassion. No other supermarket can compare to the service we provide. Meet the team! </p>                
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid bg-3  bg-body-tertiary">
+        <div class="col py-5 features">
+            <div class="team">
+                <div class="card">
+                    <div class="layer"></div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas
+                        facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa 
+                        veritatis magni voluptates voluptatum.</p>
+                        <div class="image">
+                            <img src="~/Images/person1.jpg" alt="man crossing arms">
+                        </div>
+                        <div class="details">
+                            <h2> Adam Sandler <br> <span>Store Manager</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team">
+                <div class="card">
+                    <div class="layer"></div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas
+                        facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa
+                        veritatis magni voluptates voluptatum.</p>
+                        <div class="image">
+                            <img src="~/Images/person2.jpg" alt="woman crossing arms">
+                        </div>
+                        <div class="details">
+                            <h2> Beyonce Knowles <br> <span>Assistant Store Manager</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team">
+                <div class="card">
+                    <div class="layer">
+
+                    </div>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas 
+                        facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa
+                        veritatis magni voluptates voluptatum.</p>
+                        <div class="image">
+                            <img src="~/Images/person3.jpg" style="align-content: center;" alt="">
+
+                        </div>
+                        <div class="details">
+                            <h2> Michael Scott <br> <span>Lead Merchandiser</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <!--==============================================-->
+    <!--               Footer                         -->
+    <!--==============================================-->
+    <div class="container features">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2024 Dunwoody Supermarket, Inc</p>
+            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #d55b3e;">DS</i>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Role</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/92e37675b9.js" crossorigin="anonymous"></script>

@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<style>
+    body {
+        color: #000;
+        background-color: #fdb44b;
+    }
+
+    .card {
+        padding: 30px 40px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        border: none !important;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)
+    }
+
+    input, textarea, button {
+        padding: 8px 15px;
+        border-radius: 5px !important;
+        margin: 5px 0px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        font-size: 18px !important;
+        font-weight: 300
+    }
+        input:focus, textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #00BCD4;
+            outline-width: 0;
+            font-weight: 400
+        }
+
+    .btn-block {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        font-weight: normal;
+        background: #005792;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 05px 30px;
+    }
+
+        .btn-block:hover {
+            background: #00bbf0;
+            color: #000;
+            font-weight: normal;
+        }
+
+
+    button:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0
+    }
+    .hey {
+        height: 0;
+    }
+</style>
+<body>
+
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h1 style="color: #00204a; font-family: Georgia, 'Times New Roman', Times, serif;"><b>Contact Us</b></h1>
+                <p class="text-white" sstyle="font-family: 'Century Gothic';">We appreciate as much feedback<br>as possible. Please feel free to let us know how we can improve your experience.<br /> We look forward to hearing what you have to say!</p>
+
+                <div class="card">
+                    <p style="color: #005792; font-size:10px; font-family: Georgia, 'Times New Roman', Times, serif;">Please make sure you fill out every single box. Click submit when you are finished.</p>
+
+                    <form class="form-card">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="text-start px-3">First name<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="First name" onblur="validate(1)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="text-start px-3">Last name<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Last name" onblur="validate(2)"> </div>
+                        </div>
+                        <br />
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="text-start px-3">Email address<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="email@email.com" onblur="validate(3)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="text-start px-3">Phone number<span class="text-danger"> *</span></label> <input type="text" id="mob" name="mob" placeholder="(123) 456-7890" onblur="validate(4)"> </div>
+                        </div>
+                        <br />
+                        <div class="row justify-content-between text-left">
+                            <label class="text-start px-4">Communication Preference<span class="text-danger"> *</span></label>
+                            <div class="form-group col-sm-6 flex-column d-flex py-1 px-lg-0">
+                                <select class="form-select px-3" style="margin-left: 14px;" aria-label="Default select example">
+                                    <option selected> Please select one</option>
+                                    <option value="1">Cell</option>
+                                    <option value="2">Mobile</option>
+                                    <option value="3">Email</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-11 flex-column d-flex">
+                                <label for="comment" class="text-start px-3">Nature of inquiry<span class="text-danger"> *</span></label>
+                                <textarea class="form-control" cols="40" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row justify-content-center">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block text-center">Submit</button> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================================-->
+    <!--               Footer                         -->
+    <!--==============================================-->
+    <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2024 Dunwoody Supermarket, Inc</p>
+            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #d55b3e;">DS</i>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Role</a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+
+
+</body>

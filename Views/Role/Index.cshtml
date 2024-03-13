@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style type="text/css">
+    body {
+        background: #e7eaf6;
+    }
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+    }
+    #tbrole, .c {
+        font-weight: bold;
+    }
+
+    .normal-text {
+        font-weight: normal;
+    }
+
+    .btn-role {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        font-weight: normal;
+        background: #38598b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 05px 30px;
+    }
+
+        .btn-role:hover {
+            background: #a2a8d3;            
+        }
+</style>
+
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h1 style="color: #113f67;; font-family: Georgia, 'Times New Roman', Times, serif;"><b>Roles</b></h1>
+                <h5 style="font-family: 'Century Gothic';">Below are the available roles for application. </h5>
+                <p style="font-family: 'Century Gothic';font-size: 12px;"> If you wish to add a role, please click on the button below.</p>
+                <div class="col-sm-12 col-xs-12">
+                    <button class="btn btn-role text-white">@Html.ActionLink("Create New Role", "Create", "Role", new { style = "text-decoration:none; color: #fff;" })</button>
+                </div>
+                <br />
+                <div class="panel-body table-responsive justify-content-center" style="font-family: 'Century Gothic';">
+                    <table id="tbrole" class="table ">
+                        <tr>
+                            <th class="c text-center text-white" style="background: #3f72af; "> Role Name </th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="normal-text text-center"> @item.Name</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================================-->
+    <!--               Footer                         -->
+    <!--==============================================-->
+    <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2024 Dunwoody Supermarket, Inc</p>
+            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #d55b3e;">DS</i>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Role</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/92e37675b9.js" crossorigin="anonymous"></script>
+

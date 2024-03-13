@@ -1,0 +1,99 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<style type="text/css">
+
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+    }
+
+    #tbrole, .c {
+        font-weight: bold;
+    }
+
+    .normal-text {
+        font-weight: normal;
+    }
+
+    .btn-submit {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        font-weight: normal;
+        background: #38598b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 05px 30px;
+    }
+
+        .btn-submit:hover {
+            background: #a2a8d3;
+        }
+
+    .features {
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+</style>
+
+<main>
+    <!--==============================================-->
+    <!--               Hero Section                   -->
+    <!--==============================================-->
+    <section class="py-5 text-center container-fluid" style="background: #e7eaf6; height: 25vh;">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <br />
+                <h1 style="color: #113f67; font-family: Georgia, 'Times New Roman', Times, serif;"><b>Add New Role</b></h1>
+                <br />
+                <h5 style="font-family: 'Century Gothic';"> Please make sure to avoid duplication of role names. </h5>
+            </div>
+        </div>
+    </section>
+    <!--------------------/ End of Hero ---------------->
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                    <div class="col g-xxl-5 p-3 mx-auto">
+                        @using (Html.BeginForm())
+                        {
+                            <table class="table" style="background: #e7eaf6;">
+                                <tr>
+                                    <td> Enter Role Name: @Html.EditorFor(m => m.Name)</td>
+                                </tr>
+                            </table>
+                            <br />
+                            <button type="submit" class="btn btn-submit"> Submit</button>
+                        }
+                    </div>               
+            </div>
+        </div>
+    </div>
+    <!--==============================================-->
+    <!--               Footer                         -->
+    <!--==============================================-->
+    <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2024 Dunwoody Supermarket, Inc</p>
+            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #d55b3e;">DS</i>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Role</a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+</main>

@@ -1,0 +1,324 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .features {
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #hero h1 {
+        margin: 0 0 10px 0;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: #fff;
+    }
+
+    #hero h1 span {
+        border-bottom: 4px solid #3498db;
+    }
+
+    #hero h2 {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+    /*---------- Buttons---------*/
+    .btn-get-started {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 2px;
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 4px;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        background: #d97020;
+        text-transform: uppercase;
+    }
+    .btn-get-started:hover {
+        background: #ef9f07;
+    }
+    .btn-register {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        background: #5f5dbd;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 12px 28px;
+    }
+    .btn-register:hover {
+        background: #5e87b8;
+    }
+    .btn-announcement {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        background: #ff6f3c;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 12px 28px;
+    }
+    .btn-announcement:hover {
+        background: #ff9a3c;
+    }
+    .btn-event {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        background: #ec729c;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 05px 05px;
+    }
+    .btn-event:hover {
+        background: #f4aeba;
+    }
+    /* End of Buttons CSS*/
+    .event-card {
+        display: block;
+        top: 0px;
+        position: relative;
+        max-width: 262px;
+        background-color: #f2f8f9;
+        border-radius: 4px;
+        padding: 32px 24px;
+        margin: 12px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        border: 1px solid #f2f8f9;
+    }
+    .event-card:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 1px solid #cccccc;
+        background-color: white;
+    }
+    .event-card:before {
+        content: "";
+        position: absolute;
+        z-index: -1;        
+        border-radius: 32px;
+        transform: scale(2);
+        transform-origin: 50% 50%;
+        transition: transform 0.15s ease-out;
+    }
+    .event-card:hover:before {
+        transform: scale(2.15);
+    }
+    .w {
+        display: flex;
+    }
+    .container:hover .card {
+        filter: blur(15px);
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    .container .card:hover {
+        filter: blur(0px);
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+</style>
+<body>
+    <main>
+        <!--==============================================-->
+        <!--               Hero Section                   -->
+        <!--==============================================-->
+        <div id="hero" class="container-fluid px-4 py-5" style="background-image: url('/Images/family-friendly.jpg'); position: relative; background-size: cover; box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5); height: 60vh;">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6 py-7"></div>
+                <div class="col-lg-6" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-white">CHOOSE ONLY THE <em style=" background: #7dd87d;">FRESHIEST</em> PRODUCE</h1>
+                    <p class="text-white fw-bold" style="font-size: 25px;"> Dunwoody Supermarket is your one-stop shop for all the quality goods you need!</p>
+                    <p class="text-white" style="font-size: 15px;"> Become an exclusive member and receive special discounts and offers today!</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" class="btn btn-get-started">LEARN MORE...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------/ End of Hero ---------------->
+        <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--==============================================-->
+        <!--               Feature Section                -->
+        <!--==============================================-->
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5 features">
+            <div class="col d-flex flex-column align-items-start gap-2">
+                <h2 class="fw-bold text-body-emphasis">Did somebody say 20% off?</h2>
+                <p class="text-body-secondary">Within 2 minutes, you can become one of our many members! What does that entail, you ask? Only the best of the best! </p>
+                <p>You get first pick on our newest items and our latest offers. Not too mention you get an initial 20% off your first order! Sign up below!  </p>
+                <a href="#" class="btn btn-register fw-bold">Register Here</a>
+            </div>
+
+            <div class="col">
+                <div class="row row-cols-1 row-cols-sm-2 g-3">
+                    <div class="col d-flex flex-column gap-2">
+                        <div>
+                            <i class="fa-solid fa-ice-cream fa-2xl" style="color: #155263;"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">Frozen Goodies</h4>
+                        <p class="text-body-secondary">Chill out in our frozen section, stocking up on ice cream, frozen vegetables and fruit, and frozen meats.</p>
+                    </div>
+
+                    <div class="col d-flex flex-column gap-2">
+                        <div>
+                            <i class="fa-solid fa-lemon fa-2xl" style="color: #ff6f3c;"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">Produce</h4>
+                        <p class="text-body-secondary">Our produce is second to none! We never let our food go bad. We work with local charities to bring good food to those in need.</p>
+                    </div>
+
+                    <div class="col d-flex flex-column gap-2">
+                        <div>
+                            <i class="fa-solid fa-bread-slice fa-2xl" style="color: #ff9a3c"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">Bakery</h4>
+                        <p class="text-body-secondary">Carba, carbs, and more carbs! Made by our skilled bakers, our bakery items leave you feeling satisfied! Come get some sweet treats!</p>
+                    </div>
+
+                    <div class="col d-flex flex-column gap-2">
+                        <div>
+                            <i class="fa-solid fa-burger fa-2xl" style="color: #ffc93c;"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-0 text-body-emphasis">Deli</h4>
+                        <p class="text-body-secondary">Ran late for work and didn't pack your lunch? No worries. Our deli has plenty of ready to go meals! Ask one of our employees for utensils.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--==============================================-->
+        <!--            Special Announcement Section      -->
+        <!--==============================================-->
+        <div class="container features">
+            <div class="card text-center">
+                <div class="card-header" style="background: #c86b85;">
+                   <b>February Bulletin</b>
+                </div>
+                <div class="card-body" style="background: #e6a4b4;">
+                    <h5 class="card-title">We love chocolate, yes we do! We love chocolate, how about you?</h5>
+                    <p class="card-text">While supplies last, come visit our bakery and get a custom, engraved chocolate bar for your beloved.</p>
+                    <a href="#" class="btn btn-announcement">Contact Us</a>
+                </div>
+                <div class="card-footer text-body-secondary" style="background: #c86b85;">
+                    10 days left!
+                </div>
+            </div>
+        </div>
+
+        <!--==============================================-->
+        <!--               Events Section                 -->
+        <!--==============================================-->
+        <section class="py-5 text-center container-fluid features bg-light-subtle">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light"><b>Upcoming Events</b></h1>
+                    <p class="lead fw-normal text-body-secondary">Come one, come all! Check out our events for February! As members of the community, we host monthly events that bring everyone together. Let's have a good time!</p>
+                    <p class="fw-light">Sign up or sign in to RSVP.</p> 
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-4 bg-light-subtle w" style="top: 15px;">
+            <div class="container features">
+
+                <div class="row row-cols-6 row-cols-sm-4 row-cols-md-4 g-2">
+                    <div class="col">
+                        <div class="card event-card shadow-sm" style="top: -100px">
+                            <div class="card-header text-center" style="background: #c54c82;">
+                                <b>Pizza Party!</b>
+                            </div>
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url('/Images/pizza-pizza.jpg'); background-size: cover;"></svg>
+                            <div class="card-body">
+                                <p class="card-text">Join us on <b>February 4th, 2024 at 4:00PM</b>. Dunwoody Supermarket will provide all the ingredients, just bring yourself and/or your loved ones!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-event">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card event-card shadow-sm" style="top: -100px">
+                            <div class="card-header text-center" style="background: #c54c82;">
+                                <b>Sweets Sunday!</b>
+                            </div>
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url('/Images/sweets.jpg'); background-size: cover;"></svg>
+                            <div class="card-body">
+                                <p class="card-text">For all of our sweet tooth customers, head on over on <b>February 11th, 2023 at 12:00PM</b> for a baking fiasco! Make some cookies and brownies for those you love!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-event">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card event-card shadow-sm" style="top: -100px">
+                            <div class="card-header text-center" style="background: #c54c82;">
+                               <b>Wine and Dine!</b>
+                            </div>
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url('/Images/wine.jpg'); background-size: cover;"></svg>
+                            <div class="card-body">
+                                <p class="card-text"><em style="color: darkred">--Adults Only--</em><b> On February 18th, 2024 at 5:30PM</b>, we will be hosting a special wine and cheese night. Come with your partners or friends! Let's <em>wine</em> down.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-event">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card event-card shadow-sm" style="top: -100px">
+                            <div class="card-header text-center" style="background: #c54c82;">
+                                <b>Single's Movie Night!</b>
+                            </div>
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url('/Images/people.jpg'); background-size: cover;"></svg>
+                            <div class="card-body">
+                                <p class="card-text"><em style="color: darkred">--Adults Only--</em> Yes, you heard that right! Our first ever single's night. Who says singles can't have fun? We sure didn't! See you on <b>February 25th, 2024 at 7:00PM</b> .</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-event">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--==============================================-->
+            <!--               Footer                         -->
+            <!--==============================================-->
+        <div class="container features">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-muted">&copy; 2024 Dunwoody Supermarket, Inc</p>
+                    <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #d55b3e;">DS</i>
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Role</a></li>
+                </ul>
+            </footer>
+        </div>
+        
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/92e37675b9.js" crossorigin="anonymous"></script>
+
